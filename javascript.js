@@ -67,8 +67,7 @@ function playGame(){
         console.log("You lost! Your score was: " + humanScore + "Computer score was: " + computerScore)
     }
     else{
-        if (humanScore>computerScore){
-            console.log("It's a tie! Your score was: " + humanScore + "Computer score was: " + computerScore)
+        console.log("It's a tie! Your score was: " + humanScore + "Computer score was: " + computerScore)
         }
     }
     console.log("The end")
