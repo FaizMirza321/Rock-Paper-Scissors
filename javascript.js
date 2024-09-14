@@ -1,19 +1,19 @@
 const options = ["rock","paper","scissors"];
 
 function numtoChoice(num){
-    if (num==0){
+    if (num==1){
         return "rock";
     }
-    else if(num==1){
+    else if(num==2){
         return "paper";
     }
-    else if (num==2){
+    else if (num==3){
         return "scissors";
     }
         
 }
 function getComputerChoice(min, max){
-    let num = Math.ceil(Math.random() * (max - min)+ min);
+    let num = Math.floor(Math.random() * (max - min)+ min);
     return numtoChoice(num);
 }
 
@@ -43,7 +43,7 @@ function playGame(){
     let computerScore = 0;
     for(i=0; i<5; i++){
         let humanChoice = getHumanChoice();
-        let computerChoice = getComputerChoice(0,2);
+        let computerChoice = getComputerChoice(1,3);
         playRound(humanChoice, computerChoice)
     }
     function playRound(humanChoice, computerChoice){
