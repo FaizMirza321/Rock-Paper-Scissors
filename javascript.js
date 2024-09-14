@@ -43,13 +43,17 @@ function playGame(){
         playRound(humanChoice, computerChoice)
     }
     function playRound(humanChoice, computerChoice){
-        console.log(humanChoice + "human")
-        console.log(computerChoice + "computer")
+        console.log(humanChoice + " human")
+        console.log(computerChoice + " computer")
         if(humanChoice == "rock" && computerChoice == "scissors"){
             humanScore+=1;
             console.log("You won this round! " + humanChoice + "beats " + computerChoice)
         }
         else if (humanChoice=="scissors" && computerChoice=="paper"){
+            humanScore+=1;
+            console.log("You won this round! " + humanChoice + "beats " + computerChoice)
+        }
+        else if (humanChoice=="paper" && computerChoice=="rock"){
             humanScore+=1;
             console.log("You won this round! " + humanChoice + "beats " + computerChoice)
         }
