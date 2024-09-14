@@ -68,7 +68,6 @@ function playGame(){
     }
     else{
         console.log("It's a tie! Your score was: " + humanScore + "Computer score was: " + computerScore)
-        }
     }
     console.log("The end")
 }
