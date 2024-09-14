@@ -1,5 +1,4 @@
-let humanScore = 0;
-let computerScore = 0;
+
 
 function numtoChoice(num){
     if (num==0){
@@ -29,22 +28,49 @@ function getHumanChoice(){
     return choice;
 
 }
-function playRound(humanChoice, computerChoice){
-    console.log(humanChoice + "human")
-    console.log(computerChoice + "computer")
-    if(humanChoice == "rock" && computerChoice == "scissors"){
-        humanScore+=1;
-        console.log("You won this round! " + humanChoice + "beats " + computerChoice)
+
+
+
+
+function playGame(){
+    let humanScore = 0;
+    let computerScore = 0;
+    for(i=0; i<5; i++){
+        let humanChoice = getHumanChoice();
+        let computerChoice = getComputerChoice(0,2);
+        playRound(humanChoice, computerChoice)
     }
-    else if (humanChoice=="scissors" && computerChoice=="paper"){
-        humanScore+=1;
-        console.log("You won this round! " + humanChoice + "beats " + computerChoice)
+    function playRound(humanChoice, computerChoice){
+        console.log(humanChoice + "human")
+        console.log(computerChoice + "computer")
+        if(humanChoice == "rock" && computerChoice == "scissors"){
+            humanScore+=1;
+            console.log("You won this round! " + humanChoice + "beats " + computerChoice)
+        }
+        else if (humanChoice=="scissors" && computerChoice=="paper"){
+            humanScore+=1;
+            console.log("You won this round! " + humanChoice + "beats " + computerChoice)
+        }
+        else if(humanChoice==computerChoice){
+            console.log("Tie round, you both picked:" + humanChoice)
+        }
+        else{
+            computerScore+=1;
+            console.log("You lost this round! " + computerChoice + "beats " + humanChoice)
+        }
     }
-    else if(humanChoice==computerChoice){
-        console.log("Tie round, you both picked:" + humanChoice)
+
+    if (humanScore>computerScore){
+        console.log("You won! Your score was: " + humanScore + "Computer score was: " + computerScore)
+    }
+    else if (humanScore<computerScore){
+        console.log("You lost! Your score was: " + humanScore + "Computer score was: " + computerScore)
     }
     else{
-        computerScore+=1;
-        console.log("You lost this round! " + computerChoice + "beats " + humanChoice)
+        if (humanScore>computerScore){
+            console.log("It's a tie! Your score was: " + humanScore + "Computer score was: " + computerScore)
+        }
     }
+    console.log("The end")
 }
+playGame();
