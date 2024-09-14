@@ -13,7 +13,7 @@ function numtoChoice(num){
         
 }
 function getComputerChoice(min, max){
-    let num = Math.floor(Math.random() * (max - min)+ min);
+    let num = Math.floor((Math.random() * max)+ min);
     return numtoChoice(num);
 }
 
