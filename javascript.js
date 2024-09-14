@@ -20,10 +20,12 @@ function getComputerChoice(min, max){
 }
 
 function getHumanChoice(){
-    let choice = prompt("rock, paper or scissors?").toLowerCase;
+    let choice = prompt("rock, paper or scissors?");
+    choice.toLowerCase;
     while (!options.includes(choice))
         console.log("invalid choice");
-        choice = prompt("rock, paper or scissors?").toLowerCase;
+        choice = prompt("rock, paper or scissors?");
+        choice.toLowerCase;
     
     return choice;
 
