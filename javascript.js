@@ -1,4 +1,4 @@
-
+const options = ["rock","paper","scissors"];
 
 function numtoChoice(num){
     if (num==0){
@@ -21,7 +21,7 @@ function getComputerChoice(min, max){
 
 function getHumanChoice(){
     let choice = prompt("rock, paper or scissors?").toLowerCase;
-    while (choice !="rock" && choice!="paper" && choice!="scissors")
+    while (!options.includes(choice))
         console.log("invalid choice");
         choice = prompt("rock, paper or scissors?").toLowerCase;
     
