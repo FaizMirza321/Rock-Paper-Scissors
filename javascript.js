@@ -22,10 +22,16 @@ function getComputerChoice(min, max){
 function getHumanChoice(){
     let choice = prompt("rock, paper or scissors?");
     choice.toLowerCase;
-    while (!options.includes(choice))
-        console.log("invalid choice");
-        choice = prompt("rock, paper or scissors?");
-        choice.toLowerCase;
+    let validated = false
+    while (validated==false)
+        if (options.includes(choice)){
+            validated=true;
+        }
+        else{
+            console.log("invalid choice");
+            choice = prompt("rock, paper or scissors?");
+            choice.toLowerCase;
+        }
     
     return choice;
 
