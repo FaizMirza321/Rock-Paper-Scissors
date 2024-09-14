@@ -13,9 +13,7 @@ function numtoChoice(num){
         
 }
 function getComputerChoice(min, max){
-    const minCeiled = Math.ceil(min);
-    const maxFloored = Math.floor(max);
-    let num = Math.floor(Math.random() * (maxFloored - minCeiled)+ minCeiled);
+    let num = Math.floor(Math.random() * (max - min)+ min);
     return numtoChoice(num);
 }
 
@@ -53,33 +51,33 @@ function playGame(){
         console.log(computerChoice + " computer")
         if(humanChoice == "rock" && computerChoice == "scissors"){
             humanScore+=1;
-            console.log("You won this round! " + humanChoice + "beats " + computerChoice)
+            console.log("You won this round! " + humanChoice + " beats " + computerChoice)
         }
         else if (humanChoice=="scissors" && computerChoice=="paper"){
             humanScore+=1;
-            console.log("You won this round! " + humanChoice + "beats " + computerChoice)
+            console.log("You won this round! " + humanChoice + " beats " + computerChoice)
         }
         else if (humanChoice=="paper" && computerChoice=="rock"){
             humanScore+=1;
-            console.log("You won this round! " + humanChoice + "beats " + computerChoice)
+            console.log("You won this round! " + humanChoice + " beats " + computerChoice)
         }
         else if(humanChoice==computerChoice){
             console.log("Tie round, you both picked:" + humanChoice)
         }
         else{
             computerScore+=1;
-            console.log("You lost this round! " + computerChoice + "beats " + humanChoice)
+            console.log("You lost this round! " + computerChoice + " beats " + humanChoice)
         }
     }
 
     if (humanScore>computerScore){
-        console.log("You won! Your score was: " + humanScore + "Computer score was: " + computerScore)
+        console.log("You won! Your score was: " + humanScore + " Computer score was: " + computerScore)
     }
     else if (humanScore<computerScore){
-        console.log("You lost! Your score was: " + humanScore + "Computer score was: " + computerScore)
+        console.log("You lost! Your score was: " + humanScore + " Computer score was: " + computerScore)
     }
     else{
-        console.log("It's a tie! Your score was: " + humanScore + "Computer score was: " + computerScore)
+        console.log("It's a tie! Your score was: " + humanScore + " Computer score was: " + computerScore)
     }
     console.log("The end")
 }
