@@ -47,14 +47,14 @@ let humanChoice = getHumanChoice();
 
 
 const btns = document.querySelectorAll(".choice")
-btns.forEach(btn => 
+btns.forEach(btn => {
     btn.addEventListener("click", () => {
         console.log("bbbb")
         console.log(btn.textContent)
         console.log("aaaa")
     
-    }
-));
+    })
+});
 
 
 function playRound(humanChoice, computerChoice){
