@@ -40,7 +40,7 @@ function playRound(humanChoice, computerChoice){
 
 
     if(computerScore==5 || humanScore==5){
-        return resultText = "Result: " + finalScore();
+        return "Result: " + finalScore();
     }
     if(humanChoice == "rock" && computerChoice == "scissors"){
         humanScore+=1;
