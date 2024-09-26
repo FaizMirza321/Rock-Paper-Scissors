@@ -67,6 +67,7 @@ function playRound(humanChoice, computerChoice){
 function finalScore(){
     let temp = humanScore;
     let temp2 = computerScore;
+    restartGame();
     if (humanScore>computerScore){
         return "You won! Your score was: " + temp + " Computer score was: " + temp2;
     }
