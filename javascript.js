@@ -69,10 +69,10 @@ function finalScore(){
     let temp = humanScore;
     let temp2 = computerScore;
     restartGame();
-    if (humanScore>computerScore){
+    if (humanScore==5){
         return "You won! Your score was: " + temp + " Computer score was: " + temp2;
     }
-    else if (humanScore<computerScore){
+    else if (computerScore==5){
         return "You lost! Your score was: " + temp + " Computer score was: " + temp2;
     }
     else{
