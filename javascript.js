@@ -44,8 +44,7 @@ function getHumanChoice(){
 let humanScore = 0;
 let computerScore = 0; 
 let humanChoice = getHumanChoice();
-let computerChoice = getComputerChoice(1,3);
-playRound(humanChoice, computerChoice);
+
 
 const btns = document.querySelectorAll(".choice")
 btns.forEach(btn => 
