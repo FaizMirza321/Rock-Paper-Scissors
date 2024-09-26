@@ -134,4 +134,4 @@ function playRound(humanChoice, computerChoice){
     console.log("The end")
     
 }*/
-playGame();
+//playGame();
