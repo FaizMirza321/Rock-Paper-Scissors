@@ -12,6 +12,7 @@ let resultText = document.querySelector("#resultText");
 function restartGame(){
     humanScore = 0;
     computerScore = 0;
+    
 }
 function numtoChoice(num){
     if (num==1){
@@ -40,7 +41,7 @@ function playRound(humanChoice, computerChoice){
 
 
     if(computerScore==5 || humanScore==5){
-        return "Result: " + finalScore();
+        return finalScore();
     }
     if(humanChoice == "rock" && computerChoice == "scissors"){
         humanScore+=1;
@@ -86,6 +87,6 @@ buttons.forEach(button => {
         console.log(button.textContent)
         humanChoice = button.textContent;
         computerChoice = getComputerChoice(1,3);
-        resultText.textContent = playRound(humanChoice, computerChoice);
+        resultText.textContent = "Result: " + playRound(humanChoice, computerChoice);
     });
 });
