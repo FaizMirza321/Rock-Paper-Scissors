@@ -43,8 +43,7 @@ function getHumanChoice(){
 
 let humanScore = 0;
 let computerScore = 0; 
-let humanChoice = getHumanChoice();
-
+let humanChoice;
 
 const btns = document.querySelectorAll(".choice")
 btns.forEach(btn => {
