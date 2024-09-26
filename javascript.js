@@ -56,7 +56,7 @@ function playRound(humanChoice, computerChoice){
         return "You won this round! " + humanChoice + " beats " + computerChoice;
     }
     else if(humanChoice==computerChoice){
-        return "Tie round, you both picked:" + humanChoice;
+        return "Tie round, you both picked: " + humanChoice;
     }
     else{
         computerScore+=1;
